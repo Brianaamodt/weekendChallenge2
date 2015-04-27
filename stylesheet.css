@@ -1,0 +1,47 @@
+body{
+	background-image: url(cake.jpg);
+	background-size: 100%;
+}
+
+
+
+#shuffleButton {
+	position: absolute;
+	text-align: center;
+	margin-top: 17px;
+	margin-left: 10px;
+	width: 75px;
+	height: 75px;
+	background-image: url(portal.png);
+	background-size: 100%;
+	display: inline-block;
+}
+
+.numberButton {
+
+	text-align: center;
+	width: 100px;
+	height: 100px;
+	margin-top: 5px;
+	font-size: 36px;
+	font-family: Arial;
+	text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+	line-height: 100px;
+	background-image: url(companion.png);
+	background-size: 100%;
+	color: #FFFFFF;
+	display: inline-block;
+}
+
+
+.teamContainer {
+	text-align: center;
+	font-family: sans-serif;
+	vertical-align: top;
+	background-color: #d3d3d3;
+	width: 100px;
+	margin: 15px;
+	border-radius: 10px;
+	display: inline-block;
+
+}
