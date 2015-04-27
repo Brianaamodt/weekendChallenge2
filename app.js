@@ -4,13 +4,10 @@ var count = 0;
 var teamSize = 0;
 //functions live here
 function shakeText(selector){
-  $(selector).animate({'padding-left' : '5px'} , 50 , function(){
-    $(selector).animate({'padding-left' : '0px'} , 50, function(){
-      $(selector).animate({'padding-left' : '5px'} , 50 , function(){
-        $(selector).animate({'padding-left' : '0px'} , 50)
-      });
-    });
-  });
+  for(var jiggle = 0; jiggle < 2; jiggle++){
+    $(selector).animate({'padding-left' : '10px', 'margin-right' : '-=10'} , 50);
+      $(selector).animate({'padding-left' : '0px', 'margin-right' : '+=10'} , 50);
+  };
 };
 //jquery lives here and does stuff 
 $(document).ready(function () {
@@ -20,16 +17,19 @@ $(document).ready(function () {
   });
   $("#shuffleButton").on('click', function(){
     for (var num = 0; num <= 9; num++){
-      $("#team" + num).empty();
+      $("#container").empty();
     };
     if(teamSize == 0){
       alert ("Please select number of teams!");
       return;
-    }
-      people = _.shuffle(nameArray);
+    }else{
+    people = _.shuffle(nameArray);
+    for (var i = 0; i < teamSize; i++)
+    $("#container").append("<div id='team" + i + "' class='teamList'></div>");
+    };
     count=0;
-    for(var i = 0; i < people.length; i++){
-      $("#team" + count).append("<p>" + people[i] + "</p>");
+    for(var j = 0; j < people.length; j++){
+      $("#team" + count).append("<p>" + people[j] + "</p>");
       count++;
       if(count == teamSize){
         count=0;
