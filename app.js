@@ -22,11 +22,11 @@ $(document).ready(function () {
     if(teamSize == 0){
       alert ("Please select number of teams!");
       return;
-    }else{
+    }
     people = _.shuffle(nameArray);
-    for (var i = 0; i < teamSize; i++)
+    for (var i = 0; i < teamSize; i++){
     $("#container").append("<div id='team" + i + "' class='teamList'></div>");
-    };
+    }
     count=0;
     for(var j = 0; j < people.length; j++){
       $("#team" + count).append("<p>" + people[j] + "</p>");
