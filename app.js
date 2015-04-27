@@ -25,9 +25,8 @@ $(document).ready(function () {
     if(teamSize == 0){
       alert ("Please select number of teams!");
       return;
-    }else{
-      people = _.shuffle(nameArray);
     }
+      people = _.shuffle(nameArray);
     count=0;
     for(var i = 0; i < people.length; i++){
       $("#team" + count).append("<p>" + people[i] + "</p>");
