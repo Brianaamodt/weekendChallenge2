@@ -12,18 +12,6 @@ function shakeText(selector){
     });
   });
 };
-function clearTeams(){
-  $("#team0").empty();
-  $("#team1").empty();
-  $("#team2").empty();
-  $("#team3").empty();
-  $("#team4").empty();
-  $("#team5").empty();
-  $("#team6").empty();
-  $("#team7").empty();
-  $("#team8").empty();
-  $("#team9").empty();
-}
 //jquery lives here and does stuff 
 $(document).ready(function () {
   $(".numberButton").on('click', function(){
@@ -32,7 +20,9 @@ $(document).ready(function () {
       console.log(teamSize);
   });
   $("#shuffleButton").on('click', function(){
-    clearTeams();
+    for (var num = 0; num < 10; num++){
+      $("#team" + num).empty();
+    };
     if(teamSize == 0){
       alert ("Please select number of teams!");
       return;
