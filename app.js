@@ -19,7 +19,7 @@ $(document).ready(function () {
       teamSize = $(this).data("teamcount");
   });
   $("#shuffleButton").on('click', function(){
-    for (var num = 0; num < 10; num++){
+    for (var num = 0; num <= 9; num++){
       $("#team" + num).empty();
     };
     if(teamSize == 0){
