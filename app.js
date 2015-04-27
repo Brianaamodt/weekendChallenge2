@@ -29,7 +29,7 @@ $(document).ready(function () {
     }
     people = _.shuffle(nameArray);
     for (var i = 0; i < teamSize; i++){
-    $("#container").append("<div id='team" + i + "' class='teamList'></div>");
+    $("#container").append("<div id='team" + i + "' class='teamList'></div>").hide().slideDown(1000);
   }
     count=0;
     for(var j = 0; j < people.length; j++){
