@@ -17,7 +17,6 @@ $(document).ready(function () {
   $(".numberButton").on('click', function(){
       shakeText(this);
       teamSize = $(this).data("teamcount");
-      console.log(teamSize);
   });
   $("#shuffleButton").on('click', function(){
     for (var num = 0; num < 10; num++){
